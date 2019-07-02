@@ -2,9 +2,9 @@
 <project name="TomcatExample" default="war">
 
 	<path id="compile.classpath">
-		<fileset dir="WebContent/WEB-INF/lib">
+		<!--<fileset dir="WebContent/WEB-INF/lib">
 			<include name="*.jar"/>
-		</fileset>
+		</fileset>-->
 	</path>
 	
 	<target name="init">
@@ -21,7 +21,7 @@
 	<target name="war" depends="compile">
 		<war destfile="dist/TomcatExample.war" webxml="WebContent/WEB-INF/web.xml">
 			<fileset dir="WebContent"/>
-			<lib dir="WebContent/WEB-INF/lib"/>
+			<!--<lib dir="WebContent/WEB-INF/lib"/>-->
 			<classes dir="build/classes"/>
 		</war>
 	</target>
